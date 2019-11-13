@@ -1,0 +1,39 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+.d-flex {
+    display: flex;
+    justify-content: center;
+}
+.p1 {
+    padding: 0.5rem;
+}
+.floatR {
+    float: right;
+}
+.pointer {
+    cursor: pointer;
+}
+.custom-input {
+    position: relative;
+    width: 300px;
+    input {
+        width: 100%;
+    }
+    .drop-down{
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        border: 1px solid #eee;
+        .suggestion {
+            &:hover {
+                background-color: #eee;
+            }
+            .hover {
+                background-color: #eee;
+            }
+        }
+    }
+}

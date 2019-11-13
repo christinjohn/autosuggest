@@ -1,0 +1,13 @@
+<div class="d-flex">
+    <div class="custom-input" (keyup)="handleKeyPress($event)">
+        <input #autoSuggestEl class="p1" type="text" placeholder="Search ..." (focus)="handleFocus($event)" (blur)="handleBlur()" [formControl]="autoSuggestInput" [value]="autoSuggestText">
+        <div class="drop-down" *ngIf="showDropDown">
+            <div *ngFor="let s of suggestions" class="suggestion">
+                <div *ngIf="s !== ''" class="p1" [ngClass]="s.current? 'hover': ''">
+                    {{s.str}}
+                    <span class="floatR pointer" (click)="addSuggestion(s.str)">&#8598;</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
